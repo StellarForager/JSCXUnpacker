@@ -1,0 +1,2 @@
+# JSCXUnpacker
+.jscx->.js
