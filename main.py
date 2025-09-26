@@ -17,7 +17,7 @@ def find_jscx_files(directory):
             if file.endswith('.jscx'):
                 result.append(os.path.join(root, file))
     return result
-target_directory = r"C:\Users\Administrator\AppData\Local\cxstudy\1.3.8\resources\app\electron"
+target_directory = r"C:\Users\Administrator\AppData\Local\cxstudy\1.3.8\resources\unpacked\electron"
 files = find_jscx_files(target_directory)
 
 for file in files:
@@ -30,5 +30,5 @@ for file in files:
     aes = AES.new(aeskey, AES.MODE_ECB)
     decoded = unpad(aes.decrypt(enc), 16).decode('utf-8')
     target = _dir + '\\' + pureName + '.js'
-    open(target, 'w').write(decoded)
+    open(target, 'wb').write(decoded.encode('utf-8'))
     os.remove(file)
