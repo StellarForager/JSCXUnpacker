@@ -1,6 +1,21 @@
-# JSCXUnpacker
-.jscx->.js
+# JSCXUnpacker  
+逆向解密工具 —— 针对 学习通 （ChaoXing Desktop客户端）JS 加密机制的分析与实现  
+
+## 一、项目简介  
+本项目 JSCXUnpacker 旨在针对 学习通客户端（PC 端）所采用的 JS 加密/打包机制，提供一个可运行的 PoC 工具，用于解包、解密其加密 JavaScript 模块。  
+该客户端版本为 **1.3.8**（截至 2025-11-11 更新）在本文分析中使用。
+项目主要是出于逆向研究与技术分享目的，不保证在所有版本下都有效，仅供学习参考。
+
+## 二、功能特性  
+- 识别并处理客户端加密后的 `.jscx` 扩展模块（或其他自定义扩展）  
+- 调用 Native 扩展或脚本方式，解密并还原原始 JS 源码  
+- 支持将解密后的 JS 内容做进一步分析、静态检查或动态 hooking  
+- 结构清晰，便于后续扩展（如支持其它版本、模块、平台等）  
+
+## 三、环境与依赖  
+1. Node.js 环境（建议最新版的asar unpack工具）
+2. Python 3.x 
 
 
-## usage
-https://blog.steesha.cn/archives/646d5e26-6549-4498-95c0-8609c8fc69c8
+## 四、快速上手指南  
+请详见博客 https://blog.steesha.cn/archives/646d5e26-6549-4498-95c0-8609c8fc69c8
